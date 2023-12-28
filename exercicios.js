@@ -51,4 +51,72 @@ const cubo = 3;
         }
 
     };
-        console.log(numeroPrimo(num3 = 5));
+        console.log(numeroPrimo(num3 = 7));
+
+//Escreva uma função que calcule e retorne o fatorial de um número inteiro fornecido pelo usuário. 
+const numeroFat = function(i){
+    if(i === 0){
+    return "Inválido"
+        }else{
+        for( var i = 5; i >= 0; i--){
+        resposta = i * ( i - 1);
+        resposta += resposta * i;
+        return resposta
+        }
+        }
+};
+console.log(numeroFat(i = 5))
+
+
+//Escreva uma função em JavaScript que conte quantas vezes um caractere aparece em uma string. Tanto o caractere quanto a string devem ser fornecidos pelo usuário.
+const numeroCarac = function(string1, caracter){
+    var qtd = 0;
+    for( var n = 0; n < string1.length; n++){
+        if ( string1.charAt(n) == caracter){
+            qtd++;   
+        }
+    }
+    return qtd;
+};
+console.log(numeroCarac( string1="amora", caracter= "a"));
+
+
+// Escreva uma função que permita contar o número de vogais contidas em uma string fornecida pelo usuário. Por exemplo, o usuário informa a string “Beterraba”, e a função retorna o número 4 (há 4 vogais nessa palavra).
+    const numVogal = function(string){
+    var contador = 0;
+    for(var i = 0; i < string.length; i++){
+        if(string.charAt(i)=="a"||string.charAt(i)=="e"||string.charAt(i)=="i"||string.charAt(i)=="o"||string.charAt(i)=="u"){
+            contador++;
+            }
+        }   
+        return contador;  
+    }
+console.log(numVogal(string = "vermelho"))
+
+// Escreva uma função que mostre na tela um número fornecido pelo usuário, porém invertido. Por exemplo, o usuário fornece o número 875 e a função mostra na tela o número 578.
+
+const inverteNumero = function(nInverte){
+    for (var n = nInverte.length - 1; n >= 0; n--){
+        var reverso = reverso + nInverte[n];     
+    }
+    return reverso;
+};
+console.log(inverteNumero(nInverte= "875"));
+
+
+//Escreva uma função que informe o retorno de um investimento (montante) com base nos valores do capital inicial, tempo em meses e taxa de juros mensal, fornecidos pelo usuário.
+//Use a fórmula: M = C * (1+i)t
+//Onde:
+
+//C = Capital inicial investido
+//i = Taxa de juros, em percentual
+//t = Tempo do investimento, em meses
+
+const investimento = function(capital, taxa, tempo){
+    
+    var montante = capital * Math.pow((1 + (taxa/100)),tempo);
+    var resposta = montante.toFixed(2);
+    return  resposta;
+};
+console.log(investimento( capital = "1000", taxa = "10", tempo = "2"))
+
